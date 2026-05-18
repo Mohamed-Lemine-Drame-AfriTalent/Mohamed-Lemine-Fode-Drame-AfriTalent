@@ -27,10 +27,12 @@ body {
   background-color: var(--color-light);
   color: var(--color-dark);
   line-height: 1.6;
+  
 }
 
 h1, h2, h3 {
   font-family: var(--font-title);
+  
 }
 
  /* 4. Navbar  */
@@ -42,6 +44,21 @@ h1, h2, h3 {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--color-primary);
+}
+
+.hero1 {
+  background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  filter: brightness(80%);
+}
+.banner h1 {
+   color: white;
+    font-size: 50px;
 }
 /* Section avec image de fond */
 .cta {
@@ -93,6 +110,24 @@ h1, h2, h3 {
   transition: 0.3s;
 }
 
+.histoire{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+.texte{
+  width: 50%;
+}
+.col-md-6 {
+  width: 50%;
+  height: auto;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
 /* Effet au survol */
 .btn-cta:hover {
   background: #4f46e5;
@@ -119,7 +154,6 @@ h1, h2, h3 {
   background: white;
   border-radius: 12px;
   flex: 1 1 30%;     
-  gap: 20px;
   flex-wrap: wrap;   
 }
 
@@ -240,4 +274,25 @@ button {
 
 button:hover {
   background-color: rgb(7, 91, 128);
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 30px;
+    }
+}
+
+/* Tablette */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        padding: 30px;
+    }  
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 10px;
+    }
 }

@@ -127,12 +127,51 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding: 40px;
+  gap: 60px;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .texte{
-  width: 50%;
+  /* width: 50%; */
+  flex: 1;
 }
+.texte h2{
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #0d6efd;
+
+}
+.texte p{
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.9;
+}
+.image{
+  flex: 1;
+}
+.image img{
+  width: 100%;
+  border-radius: 20px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  transition: 0.4s;
+}
+.image img:hover{
+  transform: scale(1.03);
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); */
+}
+.stats{
+  display: flex;
+ gap: 40px;
+ margin-top: 30px;
+}
+.stats h3{
+font-weight: 100;
+color: #0d6efd;
+margin-bottom: 5px;
+}
+
 .col-md-6 {
   width: 50%;
   height: auto;
@@ -315,6 +354,12 @@ button:hover {
     .container {
         padding: 10px;
     }
+}
+
+.text-danger {
+  color: red;
+  margin-top: 5px;
+  display: block;
 }
 
 /* Titres */

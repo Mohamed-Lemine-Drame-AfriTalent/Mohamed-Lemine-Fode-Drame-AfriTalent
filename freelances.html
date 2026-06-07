@@ -56,9 +56,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <!-- FILTRE -->
     <div class="text-center mb-4">
-        <button class="btn btn-primary">Tous</button>
-        <button class="btn btn-outline-primary">Développement</button>
-        <button class="btn btn-outline-primary">Design</button>
+        <button class="btn btn-primary filter-btn" data-filter="all">Tous</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="development">Développement</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="design">Design</button>
+       
     </div>
 
    
@@ -71,7 +72,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   <div class="row g-4">
 
-    <div class="col-md-4">
+    <div class="col-md-4 freelance-card" data-category="development">
       <div class="card bg-dark text-white">
         <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mx-auto" width="80">
         <h5 class="mt-3">Amadou Diallo</h5>
@@ -84,7 +85,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </div>
 
     <!-- Carte 2 -->
-    <div class="col-md-4">
+    <div class="col-md-4 freelance-card" data-category="design">
       <div class="card bg-dark text-white">
         <img src="https://randomuser.me/api/portraits/women/21.jpg" class="rounded-circle mx-auto" width="80">
         <h5 class="mt-3">Fatou Ndiaye</h5>
@@ -114,8 +115,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
      <div class="card bg-dark text-white">
         <img src="https://randomuser.me/api/portraits/women/33.jpg" class="rounded-circle mx-auto" width="80">
         <h5 class="mt-3">Aïcha Ba</h5>
-        <p class="text-muted">Marketing Digital</p>
-        <p>Spécialiste SEO et campagnes publicitaires performantes.</p>
+        <p class="text-muted">Web Designer</p>
+        <p>Imagine et réalise des maquettes attractives adaptées à l'identité visuelle et aux besoins des clients.</p>
         <p><strong>1800FCFA/h</strong></p>
         <p>⭐⭐⭐⭐⭐</p>
         <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -140,8 +141,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       <div class="card bg-dark text-white">
         <img src="https://randomuser.me/api/portraits/women/55.jpg" class="rounded-circle mx-auto" width="80">
         <h5 class="mt-3">Marie Sow</h5>
-        <p class="text-muted">Rédactrice Tech</p>
-        <p>Rédaction d'articles SEO et contenus techniques.</p>
+        <p class="text-muted">Content Designer</p>
+        <p>Rédige et structure des contenus numériques clairs et engageants pour améliorer l'expérience des utilisateurs.</p>
         <p><strong>1200FCFA/h</strong></p>
         <p>⭐⭐⭐⭐⭐</p>
         <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>

@@ -81,3 +81,71 @@ const observer = new IntersectionObserver((entries) => {
     fadeElements.forEach(el => {
     observer.observe(el);
 });
+
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".freelance-card");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+        cards.forEach(card => {
+            if(filter === "all" || card.getAttribute("data-category") === filter){
+                card.style.display = "block";
+            }else{
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    // Champ de validation pour l'email
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    // message d'erreur
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+    const successMessage = document.getElementById("successMessage");
+    const nameError = document.getElementById("nameError");
+
+        // Reinitialisation des messages d'erreur
+    nameError.textContent  = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+    successMessage.textContent = "";
+
+        // Nom obligatoire
+    if (name.value.trim() === ""){
+        nameError.textContent = "Le nom est obligatoire.";
+        valid = false;
+    }
+
+    // Email obligatoire et format valide regex pour l'email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)){
+        emailError.textContent = "Veuillez entrer un email valide.";
+        valid = false;
+    } else if (!emailRegex.test(email.value)){
+        emailError.textContent = "Veuillez entrer un email valide.";
+        valid = false;
+    }
+
+    // message obligatoire et au moins 20 caractères
+    if (message.value.trim() === ""){
+        messageError.textContent = "Le message est obligatoire.";
+        valid = false;
+    } else if (message.value.trim().length < 20){
+        messageError.textContent = "Le message doit contenir au moins 20 caractères.";
+        valid = false;
+    }
+
+    if (valid){
+        successMessage.textContent = "Votre message a été envoyé avec succès !";
+        form.reset();
+    }
+});
